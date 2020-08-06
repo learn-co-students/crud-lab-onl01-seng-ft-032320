@@ -6,11 +6,11 @@ class Review extends Component {
     const { review } = this.props
 
     return (
-      <div>
+      <div key={review.id}>
         <li>
           {review.text}
         </li>
-        <button> X </button>
+        <button onClick={() => this.props.deleteReview(review.id)}> X </button>
       </div>
     );
   }
